@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Prediction</title>
+</head>
+<body>
+    <h1>Iris Flower Prediction</h1>
+    <form action="/predict_html" method="post">
+        <label>Sepal Length:</label><input type="text" name="sepal_length"><br>
+        <label>Sepal Width:</label><input type="text" name="sepal_width"><br>
+        <label>Petal Length:</label><input type="text" name="petal_length"><br>
+        <label>Petal Width:</label><input type="text" name="petal_width"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction is defined %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
